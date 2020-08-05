@@ -1,0 +1,47 @@
+* { 
+    margin: auto;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: chocolate;
+    /*margin: auto;*/
+}
+
+h1 {
+    font-size: large;   
+}
+
+@keyframes color-change {
+    0% {color: red;}
+    50%{color: green;}
+    100% {color: blue;}
+}
+
+.grid-container {
+    display: grid;
+    width: 960px;
+    height: 800px;
+    grid-template-rows: /*1fr 1fr 1fr;*/ repeat(var(--grid-rows), 1fr);
+    grid-template-columns: /*1fr 1fr 1fr;*/ repeat(var(--grid-cols), 1fr);
+    margin-bottom: 30px;
+    background: white;
+    border: 1px solid black;
+    /*margin: auto;*/
+}
+
+.grid-item{
+    height: 100%;
+    width: 100%;
+}
+
+.draw {
+    background: black;
+}
+
+
+/*.grid-item-draw{
+    background: black;
+} */
