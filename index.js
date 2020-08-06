@@ -19,8 +19,8 @@ function makeGrid(rowSize, columnSize){
     //console.log(isNaN(rowSize));
     container.setAttribute('style', `--grid-rows: ${rowSize}; --grid-cols: ${columnSize};`);
     container.classList.add('grid-container');
-    for(let i =0; i < gridSize;i++){
-        var div = document.createElement('div');
+    for(i =0; i < gridSize;i++){
+        let div = document.createElement('div');
         //div.setAttribute('style','background: lightblue;');
         div.classList.add('grid-item');
         //var para = document.createElement('p');
@@ -31,11 +31,11 @@ function makeGrid(rowSize, columnSize){
         draw(div);
         reset(div);
         rgbbtn.addEventListener('click', () => {
-            console.log("tits");
+            console.log("cry");
             drawLitty(div);
             //drawRgb(div)
         });
-    }
+    };
 }
 
 function draw(e) {
@@ -61,8 +61,8 @@ function userGrid() {
 function litty(e) {
     const colour = () => {
         const rando = Math.floor(Math.random()*16777215).toString(16);
-        //e.setAttribute('style',`background: ${'#' + rando};`);
-        e.style.background = '#' + rando;
+        e.setAttribute('style',`background: ${'#' + rando};`);
+        //e.style.background = '#' + rando;
         console.log("my random number: " + rando);
         //e.setAttribute('style', 'background: red');
     }
@@ -78,11 +78,16 @@ function litty(e) {
 
 function drawLitty(e){
     //console.log("farts");
+    //const rando = Math.floor(Math.random()*16777215).toString(16);
+    //console.log(rando);
     e.addEventListener('mouseover', () => {
-        console.log("im in mom");
+        console.log("i did it mom!")
         //e.setAttribute('style',`color: ${litty(e)};`);
-        e.style.color = litty(e);
-        console.log("can you hear me??");
+        e.style.color = litty(e)
+        //const rando = Math.floor(Math.random()*16777215).toString(16);
+        //e.style.background = '#' + rando;
+
+        //console.log("can you hear me??");
     });
 }
 /*function drawRgb(element) {
